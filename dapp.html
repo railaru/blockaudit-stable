@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="shortcut icon" type="image/png" href="assets/favicon/favicon-16x16.png"/>
+  <title>Blockaudit.io</title>
+  <!-- CSS dependencies -->
+
+  <link rel="stylesheet" href="css/popup.css"/>
+  <link rel="stylesheet" href="css/tether.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/form_builder.css"/>
+  <link rel="stylesheet" href="css/editable-table.css">  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dapp.css">
+  <link rel="stylesheet" href="css/custom_scroll.css">
+  <link rel="stylesheet" href="css/particles.css">
+  <link rel="stylesheet" href="css/editable-table.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!-- Script: Animated entrance -->
+  <script src="js/animate-in.js"></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cldup.com/S6Ptkwu_qA.js'></script>
+  <!-- Script: Chartist -->
+  <script src="js/chartist.min.js"></script> 
+
+</head>
+
+
+<body>
+
+
+  <!-- Navbar--> 
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dapp-dropdown fixed-top" id="dapp-navbar">
+    <div class="row">
+      <div class="col">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-plus-circle"></i> Add
+            </button>
+              <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenu2">
+                
+                <div id="Spreadsheets_menu_bar">
+                  Spreadsheets
+                </div>
+                
+                <div id="myElement" class="simplebar">
+                  <div id="Spreadsheets_menu_content">
+                      <div class="dropdown-menu-row-full">
+                        <div class="form_bal_sheet1" id="resizable-div">                     
+                          <img src="assets/images/sheets/sheet1.jpg" class="img-fluid" alt="sheet1">                
+                        </div>                                                          
+                      </div>  
+      
+                      <div class="dropdown-menu-row-full">
+                        <div class="form_bal_sheet2" id="resizable-div">                     
+                          <img src="assets/images/sheets/sheet2.jpg" class="img-fluid" alt="sheet2">                
+                        </div>                                                          
+                      </div>  
+                      
+                      <div class="dropdown-menu-row-full">
+                        <div class="form_bal_sheet3" id="resizable-div">                     
+                          <img src="assets/images/sheets/sheet3.jpg" class="img-fluid" alt="sheet3">                
+                        </div>                                                          
+                      </div>                     
+                      <div class="dropdown-menu-row-empty">
+                        More Presets Coming Soon!
+                      </div>     
+                      <div class="dropdown-menu-row-empty">
+                        More Presets Coming Soon!
+                      </div>    
+                      <div class="dropdown-menu-row-empty">
+                        More Presets Coming Soon!
+                      </div>         
+                  </div>                                      
+                </div>
+
+                <div id="Charts_menu_bar">
+                  Charts
+                </div>
+
+                <div id="Charts_menu_content">
+                  <div id="myElement2" class="simplebar">
+                    <div id="Spreadsheets_menu_content">
+                      <div class="dropdown-menu-row-full">
+                        <div class="form_bal_chart1" id="resizable-div">                     
+                          <img src="assets/images/charts/chart1.jpg" class="img-fluid" alt="chart1">                
+                        </div>                                                          
+                      </div>  
+      
+                      <div class="dropdown-menu-row-full">
+                        <div class="form_bal_chart2" id="resizable-div">                     
+                          <img src="assets/images/charts/chart2.jpg" class="img-fluid" alt="chart2">              
+                        </div>                                                          
+                      </div>  
+                      
+                      <div class="dropdown-menu-row-empty">
+                        More Presets Coming Soon!
+                      </div>                      
+                      <div class="dropdown-menu-row-empty">
+                        More Presets Coming Soon!
+                      </div>       
+                      <div class="dropdown-menu-row-empty">
+                        More Presets Coming Soon!
+                      </div>     
+                      <div class="dropdown-menu-row-empty">
+                        More Presets Coming Soon!
+                      </div>         
+                  </div>                                      
+                  </div>
+                </div>   
+
+
+              </div>
+          </div>
+      </div>
+
+      <div class="col">
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="far fa-folder-open"></i> File
+        </button>
+        <div class="dropdown-menu" id="dropdown-menu2" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Share...</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">New ▶</a>
+          <a class="dropdown-item" href="#">Open <b>Ctrl+O</b></a>
+          <a class="dropdown-item" href="#">Import...</a>
+          <a class="dropdown-item" href="#">Make a copy...</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Download as ▶</a>
+          <a class="dropdown-item" href="#">Email as attachment...</a>
+          <a class="dropdown-item" href="#">Version history ▶</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Rename...</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-folder"></i> Move to...</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-trash"></i> Move to trash</a>
+          <div class="dropdown-divider"></div>    
+          <a class="dropdown-item" href="#">Publish to the web</a>
+          <a class="dropdown-item" href="#">Email Collaborations</a>
+          <div class="dropdown-divider"></div>    
+          <a class="dropdown-item" href="#">Document details...</a>
+          <a class="dropdown-item" href="#">Spreadsheet settings...</a>
+          <a class="dropdown-item" href="#"><i class="fas fa-print"></i> Print <b>Ctrl+P</b></a>
+          
+
+
+        </div>
+
+      </div>
+      <div class="col">
+        <button class="btn btn-primary btn-popup" type="button" id="import">
+          <i class="fas fa-download"></i> Import
+        </button>
+      </div>   
+      <div class="col">
+        <button class="btn btn-primary" type="button" id="export">
+          <i class="fas fa-upload"></i> Export
+        </button>
+      </div>    
+      <div class="col">
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-user"></i> Account
+        </button>
+        <div class="dropdown-menu" id="dropdown-menu3" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Signed in as <b>quest</b></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Your profile</a>
+          <a class="dropdown-item" href="#">Your spreadsheets</a>
+          <a class="dropdown-item" href="#">Your charts</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Help</a>
+          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Sign out</a>
+        </div>
+
+      </div> 
+    </div> 
+
+  </nav>
+  
+
+<!-- Cover -->
+
+  <div class="d-flex section-aquamarine py-5 cover" >
+  
+
+    <div id="particles-js">
+    </div>
+
+    <div class="dapp_container">
+      <div class="row">
+
+
+        <div class="col" id="dapp_section_sheets">
+          <div class="animation-examples one">
+            <div class="bal_builder">
+              <div class="form_builder_area">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1" id="dapp_empty_col"></div>         
+        
+        <div class="col" id="dapp_section_charts">
+            <div class="animation-examples one">
+          
+              <div class="bal_builder">
+                <div class="form_builder_area"></div>
+              </div>   
+            </div>
+          </div>
+        
+      </div>
+    
+
+    </div>
+    
+  </div>
+  <!-- popup import -->
+  <div class="pop-up">
+      <div class="content">
+        <div class="container_popup">
+          <span class="close"><i class="fas fa-times"></i></span>
+      
+          <div class="row">
+            <h2>Select a blockchain to import from:</h2>
+          </div> 
+          <div class="row">
+            <div class="col" id="import-ethereum">
+              <div class="zoom-effect-container">
+                <div class="image-card">
+                  <img src="assets/images/import-export-menu/ethereum.png" alt="" class="img-fluid pop-up-logo">
+                </div>
+              </div>
+              <h2>Ethereum</h2>
+            </div>
+            <div class="col" id="import-EOS">
+              <div class="zoom-effect-container">
+                <div class="image-card">
+                  <img src="assets/images/import-export-menu/eos.svg" alt="" class="img-fluid pop-up-logo">
+                </div>
+              </div>
+              <h2>EOS</h2>
+            </div>
+            <div class="col" id="import-cardano">
+              <div class="zoom-effect-container">
+                <div class="image-card">
+                  <img src="assets/images/import-export-menu/cardano.svg" alt="" class="img-fluid pop-up-logo">
+                </div>
+              </div>
+              <h2>Cardano</h2>
+            </div>
+
+
+          </div> 
+          
+        </div>
+      </div>
+  </div>
+  <!-- popup import -->
+  <!-- popup import ethereum -->
+  <div class="pop-up-import-ethereum">
+      <div class="content">
+        <div class="container_popup">
+          <span class="close"><i class="fas fa-times"></i></span>
+          </div>
+          <div class="w-75 centered-form">
+            <form>
+  
+              <h2>Ethereum Smart Contract Details</h2>
+     
+              <div class="mb-3"> <label for="username">Username</label>
+                <div class="input-group">
+                  <div class="input-group-prepend"> <span class="input-group-text">@</span> </div>
+                  <input type="text" class="form-control" id="username" placeholder="Username" required="">
+                </div>
+              </div>
+              <div class="mb-3"> <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3"> <label for="firstName">Signature I</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+                </div>
+                <div class="col-md-6 mb-3"> <label for="lastName">Signature II</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+                </div>
+              </div>
+              <div class="row centered-form-button w-25">
+                <button class="btn btn-primary btn-lg btn-block" type="button">Import</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+     
+  </div>
+  <!-- popup import ethereum-->
+  <!-- popup import EOS -->
+  <div class="pop-up-import-EOS">
+    <div class="content">
+      <div class="container_popup">
+        <span class="close"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="w-75 centered-form">
+          <form>
+
+            <h2>EOS Smart Contract Details</h2>
+    
+            <div class="mb-3"> <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend"> <span class="input-group-text">@</span> </div>
+                <input type="text" class="form-control" id="username" placeholder="Username" required="">
+              </div>
+            </div>
+            <div class="mb-3"> <label for="email">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3"> <label for="firstName">Signature I</label>
+                <input type="text" class="form-control" id="firstName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+              </div>
+              <div class="col-md-6 mb-3"> <label for="lastName">Signature II</label>
+                <input type="text" class="form-control" id="lastName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+              </div>
+            </div>
+            <div class="row centered-form-button w-25">
+              <button class="btn btn-primary btn-lg btn-block" type="button">Import</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+     
+  </div>
+  <!-- popup import EOS-->
+  <!-- popup import cardano -->
+  <div class="pop-up-import-cardano">
+    <div class="content">
+      <div class="container_popup">
+        <span class="close"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="w-75 centered-form">
+          <form>
+
+            <h2>Cardano Smart Contract Details</h2>
+    
+            <div class="mb-3"> <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend"> <span class="input-group-text">@</span> </div>
+                <input type="text" class="form-control" id="username" placeholder="Username" required="">
+              </div>
+            </div>
+            <div class="mb-3"> <label for="email">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3"> <label for="firstName">Signature I</label>
+                <input type="text" class="form-control" id="firstName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+              </div>
+              <div class="col-md-6 mb-3"> <label for="lastName">Signature II</label>
+                <input type="text" class="form-control" id="lastName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+              </div>
+            </div>
+            <div class="row centered-form-button w-25">
+              <button class="btn btn-primary btn-lg btn-block" type="button">Import</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+     
+  </div>
+  <!-- popup import EOS-->
+  
+  <!-- popup export -->
+  <div class="pop-up-export">
+      <div class="content">
+        <div class="container_popup">
+          <span class="close"><i class="fas fa-times"></i></span>
+      
+          <div class="row">
+            <h2>Select a blockchain to export to:</h2>
+          </div> 
+          <div class="row">
+            <div class="col" id="export-ethereum">
+              <div class="zoom-effect-container">
+                <div class="image-card">
+                  <img src="assets/images/import-export-menu/ethereum.png" alt="" class="img-fluid pop-up-logo">
+                </div>
+              </div>
+              <h2>Ethereum</h2>
+            </div>
+            <div class="col" id="export-EOS">
+              <div class="zoom-effect-container">
+                <div class="image-card">
+                  <img src="assets/images/import-export-menu/eos.svg" alt="" class="img-fluid pop-up-logo">
+                </div>
+              </div>
+              <h2>EOS</h2>
+            </div>
+            <div class="col" id="export-cardano">
+              <div class="zoom-effect-container">
+                <div class="image-card">
+                  <img src="assets/images/import-export-menu/cardano.svg" alt="" class="img-fluid pop-up-logo">
+                </div>
+              </div>
+              <h2>Cardano</h2>
+            </div>
+
+
+          </div> 
+          
+        </div>
+      </div>
+  </div>
+  <!-- popup export -->
+  <!-- popup export ethereum -->
+  <div class="pop-up-export-ethereum">
+      <div class="content">
+        <div class="container_popup">
+          <span class="close"><i class="fas fa-times"></i></span>
+          </div>
+          <div class="w-75 centered-form">
+            <form>
+  
+              <h2>Ethereum Smart Contract Details</h2>
+     
+              <div class="mb-3"> <label for="username">Username</label>
+                <div class="input-group">
+                  <div class="input-group-prepend"> <span class="input-group-text">@</span> </div>
+                  <input type="text" class="form-control" id="username" placeholder="Username" required="">
+                </div>
+              </div>
+              <div class="mb-3"> <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3"> <label for="firstName">Signature I</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+                </div>
+                <div class="col-md-6 mb-3"> <label for="lastName">Signature II</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+                </div>
+              </div>
+              <div class="row centered-form-button w-25">
+                <button class="btn btn-primary btn-lg btn-block" type="button">Export</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+     
+  </div>
+  <!-- popup export ethereum-->
+  <!-- popup export EOS -->
+  <div class="pop-up-export-EOS">
+    <div class="content">
+      <div class="container_popup">
+        <span class="close"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="w-75 centered-form">
+          <form>
+
+            <h2>EOS Smart Contract Details</h2>
+    
+            <div class="mb-3"> <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend"> <span class="input-group-text">@</span> </div>
+                <input type="text" class="form-control" id="username" placeholder="Username" required="">
+              </div>
+            </div>
+            <div class="mb-3"> <label for="email">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3"> <label for="firstName">Signature I</label>
+                <input type="text" class="form-control" id="firstName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+              </div>
+              <div class="col-md-6 mb-3"> <label for="lastName">Signature II</label>
+                <input type="text" class="form-control" id="lastName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+              </div>
+            </div>
+            <div class="row centered-form-button w-25">
+              <button class="btn btn-primary btn-lg btn-block" type="button">Export</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+     
+  </div>
+  <!-- popup export EOS-->
+  <!-- popup export cardano -->
+  <div class="pop-up-export-cardano">
+    <div class="content">
+      <div class="container_popup">
+        <span class="close"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="w-75 centered-form">
+          <form>
+
+            <h2>Cardano Smart Contract Details</h2>
+    
+            <div class="mb-3"> <label for="username">Username</label>
+              <div class="input-group">
+                <div class="input-group-prepend"> <span class="input-group-text">@</span> </div>
+                <input type="text" class="form-control" id="username" placeholder="Username" required="">
+              </div>
+            </div>
+            <div class="mb-3"> <label for="email">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3"> <label for="firstName">Signature I</label>
+                <input type="text" class="form-control" id="firstName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+              </div>
+              <div class="col-md-6 mb-3"> <label for="lastName">Signature II</label>
+                <input type="text" class="form-control" id="lastName" placeholder="dqE3gJz/+5CQHfSJwMP2nQ" value="" required="">
+              </div>
+            </div>
+            <div class="row centered-form-button w-25">
+              <button class="btn btn-primary btn-lg btn-block" type="button">Export</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+     
+  </div>
+  <!-- popup export EOS-->
+
+  
+  <!-- Footer -->
+  <footer class="footer-landing-page">
+      <div class="container py-5">
+        <div class="row">
+          <div id="footer_text_box" class="col-12 col-md"> <i class="fa fa-dot-circle-o fa-lg d-block pt-1"></i> <small class="d-block my-3 text-muted">© 2018</small> </div>
+          <div id="footer_text_box" class="col-6 col-md">
+            <h5><b>About</b></h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a class="text-muted" href="index.html#about">About Blockaudit.io</a>
+              </li>
+              <li>
+                <a class="text-muted" href="index.html#daedalus">Daedalus Wallet</a>
+              </li>
+              <li>
+                  <a class="text-muted" href="https://www.cardano.org./en/terms-of-use" target="_blank">Terms Of Use</a>
+              </li>
+                          
+            </ul>
+          </div>
+          <div id="footer_text_box" class="col-6 col-md">
+            <h5><b>Getting Started</b></h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a class="text-muted" href="index.html#investment_performance">Investment Performance</a>
+              </li>
+              <li>
+                <a class="text-muted" href="index.html#land_ownership">Land Ownership</a>
+              </li>
+              <li>
+                  <a class="text-muted" href="index.html#medical_records">Medical Records</a>
+                </li>            
+            </ul>
+          </div>
+          <div id="footer_text_box" class="col-6 col-md">
+              <h5><b>Resources</b></h5>
+              <ul class="list-unstyled text-small">
+                <li>
+                  <a class="text-muted" href="index.html#installing">Installing</a>
+                </li>
+                <li>
+                  <a class="text-muted" href="index.html#custom_dapp">Custom DAPP</a>
+                </li>
+                <li>
+                  <a class="text-muted" href="https://cardanodocs.com/technical/wallet/api" target="_blank">API</a>
+                </li>
+                <li>
+                  <a class="text-muted" href="https://www.cardano.org/en/development" target="_blank">Cardano Resources</a>
+                </li>            
+              </ul>
+            </div>
+            <div id="footer_text_box" class="col-6 col-md">
+                <h5><b>Community</b></h5>
+                <ul class="list-unstyled text-small">
+                  <li>
+                    <a class="text-muted" href="index.html#news">News</a>
+                  </li>
+                  <li>
+                    <a class="text-muted" href="#">GitHub</a>
+                  </li>
+                  <li>
+                    <a class="text-muted" href="https://www.cardanofoundation.org/learn-more" target="_blank">Media</a>
+                  </li>            
+                </ul>
+              </div>
+        </div>
+      </div>
+  </footer>
+
+
+  <!-- JavaScript drag components -->
+  <!-- sheets -->
+
+  <script type="text/template" id="sheet1">
+    <div class="drag-component-dark">
+      <iframe width="100%" height="97%" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTwLI4yJBRyLESZCD1seOc3eNWh0aAn8rw5EUmrdendeyQ1h9T0vJ2fnok_NH0Ce0uO-nNv8mdJA64j/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
+  </script>
+  <script type="text/template" id="sheet2">
+    <div class="drag-component-light">
+      <iframe width="100%" height="97%" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTceQHL-FTr3l7piaGNd5A48268SDC20CLH4uDO26rz-iQQSPwAgi376qHYZXAx1jhZFKxy9XUU-4R5/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
+  </script>
+  <script type="text/template" id="sheet3">
+    <div class="drag-component-light">
+      <iframe width="100%" height="97%" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR5i0Oy9AGO7wNqGe4WggBEKcpvrqWBkS-_Mq9ke2-HgkojgHuDz1Q8jFpxYFJE4f5LSWK7DtLwfgGE/pubhtml?gid=167422185&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
+  </script>  
+  <script type="text/template" id="sheet4">
+    <img src="assets/images/sheets/sheet4.jpg" class="img-fluid" alt="sheet4">
+  </script>
+  <script type="text/template" id="sheet5">
+    <img src="assets/images/sheets/sheet5.jpg" class="img-fluid" alt="sheet5">
+  </script>
+
+  <!-- charts -->
+
+  <script type="text/template" id="chart1">
+    <div class="drag-component-dark">
+      <iframe width="100%" height="48%" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTwLI4yJBRyLESZCD1seOc3eNWh0aAn8rw5EUmrdendeyQ1h9T0vJ2fnok_NH0Ce0uO-nNv8mdJA64j/pubchart?oid=1111222664&amp;format=interactive"></iframe>
+      <iframe width="100%" height="48%" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTwLI4yJBRyLESZCD1seOc3eNWh0aAn8rw5EUmrdendeyQ1h9T0vJ2fnok_NH0Ce0uO-nNv8mdJA64j/pubchart?oid=367691121&amp;format=interactive"></iframe>
+    </div>
+  </script>
+  <script type="text/template" id="chart2">
+    <div class="drag-component-light">
+      <img width="100%" height="48.5%" src="assets/images/charts/chart2.jpg" class="img-fluid" alt="chart2">
+      <iframe width="100%" height="23%" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTceQHL-FTr3l7piaGNd5A48268SDC20CLH4uDO26rz-iQQSPwAgi376qHYZXAx1jhZFKxy9XUU-4R5/pubchart?oid=1239384502&amp;format=interactive"></iframe>
+      <iframe width="100%" height="23%" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTceQHL-FTr3l7piaGNd5A48268SDC20CLH4uDO26rz-iQQSPwAgi376qHYZXAx1jhZFKxy9XUU-4R5/pubchart?oid=1871122483&amp;format=interactive"></iframe>
+    </div>
+  </script>
+  <script type="text/template" id="chart3">
+    <img src="assets/images/charts/chart3.jpg" class="img-fluid" alt="chart3">
+  </script>  
+  <script type="text/template" id="chart4">
+    <img src="assets/images/charts/chart4.jpg" class="img-fluid" alt="chart4">
+  </script>
+  <script type="text/template" id="chart5">
+    <img src="assets/images/charts/chart5.jpg" class="img-fluid" alt="chart5">
+  </script>
+
+  <!-- JavaScript dependencies -->
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Script: Smooth scrolling between anchors in a same page -->
+  <script src="js/smooth-scroll.js"></script>
+
+  <script src="js/draggable.js"></script>
+  <script src="js/custom_scroll.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/editable-table.js"> </script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/form_builder.js"></script>
+  <script src="js/include_html.js"></script>
+  <script src="js/popup.js"></script>
+
+</body>
+
+</html>
